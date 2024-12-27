@@ -280,18 +280,19 @@ footer {
 </footer>
 
 <script>
-// switch between sections
 function changeContent(sectionId) {
-  var sections = document.getElementsByClassName('section');
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].style.display = 'none'; // hide sections
-  }
-  document.getElementById(sectionId).style.display = 'block'; // show selected section
+    // Hide all sections
+    var sections = document.getElementsByClassName('section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+
+    // Show the selected section
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
 }
-
-// 'about' section as main page
-document.getElementById('about').style.display = 'block';
 </script>
-
 </body>
 </html>
